@@ -1,27 +1,28 @@
 #include <stdio.h>
 
-
 /**
-  * main - the main printing funtion
-  * less than 4000000.
-  * Return: 0.
-  */
-
+ * main - the main printing function
+ * less than 4000000
+ * Return: 0;
+ */
 
 int main(void)
 {
-	int i = 0;
-	long j = 1, k = 2, sum = k;
+	unsigned long long int z = 1, y = 2, x, sum = 0;
 
-
-	while (k + j < 4000000)
+	while(y <= 4000000)
 	{
-		k += j;
-		if (k % 2 == 0)
-		sum += k;
-		j = k - j;
-		++i;
+	if (y % 2 == 0)
+	{
+	sum += y;
 	}
-	printf("%ld", sum);
-	return (0);
+
+	x = z + y;
+	z = y;
+	y = x;
+	}
+	
+	printf("The sum of even-valued terms in the ibonacci sequence not exceeding 4,000,000 is: %llu\n", sum);
+
+	return 0;
 }
